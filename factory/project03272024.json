@@ -1,0 +1,9 @@
+{
+	"name": "project03272024",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8fc4e32b-8ca4-44e4-b4e2-9db079b0c84f",
+		"tenantId": "13e3b186-c446-4aab-9c6d-9ab9bb76816c"
+	}
+}
