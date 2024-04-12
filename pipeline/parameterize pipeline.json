@@ -1,0 +1,107 @@
+{
+	"name": "parameterize pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "datalakedatasetparam",
+						"type": "DatasetReference",
+						"parameters": {
+							"container": {
+								"value": "@pipeline().parameters.container",
+								"type": "Expression"
+							},
+							"directory": {
+								"value": "@pipeline().parameters.directory",
+								"type": "Expression"
+							},
+							"filename": {
+								"value": "@pipeline().parameters.filename",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "sqldatasetparamterized",
+						"type": "DatasetReference",
+						"parameters": {
+							"sqlschema": {
+								"value": "@pipeline().parameters.sqlschema",
+								"type": "Expression"
+							},
+							"sqltablename": {
+								"value": "@pipeline().parameters.sqltablename",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			}
+		],
+		"parameters": {
+			"container": {
+				"type": "string",
+				"defaultValue": "input"
+			},
+			"directory": {
+				"type": "string"
+			},
+			"filename": {
+				"type": "string",
+				"defaultValue": "Department1.csv"
+			},
+			"sqlschema": {
+				"type": "string",
+				"defaultValue": "dbo"
+			},
+			"sqltablename": {
+				"type": "string",
+				"defaultValue": "department"
+			}
+		},
+		"annotations": []
+	}
+}
