@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "project03272024"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=cloudsqlserverlearning.database.windows.net;Initial Catalog=Cloud;User ID=Cloud"
+		},
+		"project03272024datalake_accountKey": {
+			"value": ""
+		},
+		"linkedservicekeyvaultazure_properties_typeProperties_baseUrl": {
+			"value": "https://keyvaultazure0411.vault.azure.net/"
+		},
+		"project03272024datalake_properties_typeProperties_url": {
+			"value": "https://project03272024datalake.dfs.core.windows.net/"
+		}
+	}
+}
