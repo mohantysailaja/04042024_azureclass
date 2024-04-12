@@ -10,7 +10,8 @@
 					"referenceName": "linkedservicekeyvaultazure",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "password"
+				"secretName": "password",
+				"secretVersion": "f30d099807cd4645a2212b35c6513273"
 			}
 		}
 	},
