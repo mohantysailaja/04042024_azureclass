@@ -79,6 +79,19 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('metadata')",
+						"type": "Expression"
+					},
+					"isSequential": false
+				}
 			}
 		],
 		"parameters": {
@@ -101,6 +114,34 @@
 			"sqltablename": {
 				"type": "string",
 				"defaultValue": "department"
+			}
+		},
+		"variables": {
+			"metadata": {
+				"type": "Array",
+				"defaultValue": [
+					{
+						"Inputfile": "Department1.csv",
+						"Inputcontainer": "input",
+						"Inputdirectory": "folder",
+						"Outputtable": "x",
+						"schema": "dbo"
+					},
+					{
+						"Inputfile": "Department2.csv",
+						"Inputcontainer": "input",
+						"Inputdirectory": "folder",
+						"Outputtable": "y",
+						"schema": "dbo"
+					},
+					{
+						"Inputfile": "Sample_data.csv",
+						"Inputcontainer": "input",
+						"Inputdirectory": "folder2",
+						"Outputtable": "z",
+						"schema": "dbo"
+					}
+				]
 			}
 		},
 		"annotations": []
