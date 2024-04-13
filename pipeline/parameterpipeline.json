@@ -60,15 +60,15 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"container": {
-											"value": "@pipeline().parameters.container",
+											"value": "@item().Inputcontainer",
 											"type": "Expression"
 										},
 										"directory": {
-											"value": "@pipeline().parameters.directory",
+											"value": "@item().Inputdirectory",
 											"type": "Expression"
 										},
 										"filename": {
-											"value": "@pipeline().parameters.filename",
+											"value": "@item().Inputfile",
 											"type": "Expression"
 										}
 									}
@@ -80,11 +80,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"sqlschmea": {
-											"value": "@pipeline().parameters.sqlschema",
+											"value": "@item().schema",
 											"type": "Expression"
 										},
 										"sqltablename": {
-											"value": "@pipeline().parameters.sqltablename",
+											"value": "@item().Outputtable",
 											"type": "Expression"
 										}
 									}
