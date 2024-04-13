@@ -95,23 +95,22 @@
 		],
 		"parameters": {
 			"container": {
-				"type": "string",
-				"defaultValue": "input"
-			},
-			"directory": {
 				"type": "string"
 			},
-			"filename": {
+			"directory": {
 				"type": "string",
 				"defaultValue": "Department1.csv"
 			},
-			"sqlschema": {
+			"filename": {
 				"type": "string",
 				"defaultValue": "dbo"
 			},
-			"sqltablename": {
+			"sqlschema": {
 				"type": "string",
 				"defaultValue": "department"
+			},
+			"sqltablename": {
+				"type": "string"
 			}
 		},
 		"variables": {
