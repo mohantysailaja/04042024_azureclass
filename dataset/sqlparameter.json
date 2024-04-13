@@ -1,0 +1,30 @@
+{
+	"name": "sqlparameter",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sqlschmea": {
+				"type": "string"
+			},
+			"sqltablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().sqlschmea",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().sqltablename",
+				"type": "Expression"
+			}
+		}
+	}
+}
