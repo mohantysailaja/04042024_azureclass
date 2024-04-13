@@ -14,7 +14,7 @@
 					},
 					"activities": [
 						{
-							"name": "Copy Data1",
+							"name": "Copy data1",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -55,7 +55,21 @@
 							"inputs": [
 								{
 									"referenceName": "datalakedatasetparam",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"container": {
+											"value": "@item().Inputcontainer",
+											"type": "Expression"
+										},
+										"directory": {
+											"value": "@item().Inputdirectory",
+											"type": "Expression"
+										},
+										"filename": {
+											"value": "@item().Inputfile",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
@@ -79,6 +93,27 @@
 				}
 			}
 		],
+		"parameters": {
+			"container": {
+				"type": "string",
+				"defaultValue": "input"
+			},
+			"directory": {
+				"type": "string"
+			},
+			"filename": {
+				"type": "string",
+				"defaultValue": "Department1.csv"
+			},
+			"sqlschema": {
+				"type": "string",
+				"defaultValue": "dbo"
+			},
+			"sqltablename": {
+				"type": "string",
+				"defaultValue": "department"
+			}
+		},
 		"variables": {
 			"metadata": {
 				"type": "Array",
