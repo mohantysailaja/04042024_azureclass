@@ -98,16 +98,13 @@
 				"type": "string"
 			},
 			"directory": {
-				"type": "string",
-				"defaultValue": "Department1.csv"
+				"type": "string"
 			},
 			"filename": {
-				"type": "string",
-				"defaultValue": "dbo"
+				"type": "string"
 			},
 			"sqlschema": {
-				"type": "string",
-				"defaultValue": "department"
+				"type": "string"
 			},
 			"sqltablename": {
 				"type": "string"
