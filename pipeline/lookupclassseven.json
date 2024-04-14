@@ -29,6 +29,35 @@
 				}
 			}
 		],
+		"variables": {
+			"metadata": {
+				"type": "Array",
+				"defaultValue": [
+					{
+						"Inputfile": "Employee.csv",
+						"Inputcontainer": "input",
+						"Inputdirectory”:”folder”,”Outputfile": "Employee.csv",
+						"Outputcontainer": "folderforeach",
+						"Outputdirectory": "subfolderforeach"
+					},
+					{
+						"Inputfile": "Sample_data.csv",
+						"Inputcontainer": "input",
+						"Inputdirectory": "subfolder",
+						"Outputfile": "Sample_data.csv",
+						"Outputcontainer": "folderforeach",
+						"Outputdirectory": "subfolderforeach1"
+					},
+					{
+						"Inputfile": "SampleEmployee.csv",
+						"Inputcontainer": "input",
+						"Inputdirectory”:”folder”,”Outputfile": "SampleEmployee.csv",
+						"Outputcontainer": "folderforeach",
+						"Outputdirectory": "subfolderforeach2"
+					}
+				]
+			}
+		},
 		"annotations": []
 	}
 }
