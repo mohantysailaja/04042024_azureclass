@@ -83,15 +83,15 @@
 									"referenceName": "sinkdatasetseven",
 									"type": "DatasetReference",
 									"parameters": {
-										"Outputcontainer": {
+										"container": {
 											"value": "@item().Outputcontainer",
 											"type": "Expression"
 										},
-										"Outputdirectory": {
+										"directory": {
 											"value": "@item().Outputdirectory",
 											"type": "Expression"
 										},
-										"Outputfile": {
+										"filename": {
 											"value": "@item().Outputfile",
 											"type": "Expression"
 										}

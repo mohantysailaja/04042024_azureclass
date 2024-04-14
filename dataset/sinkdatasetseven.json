@@ -22,15 +22,15 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().Outputfile",
+					"value": "@dataset().filename",
 					"type": "Expression"
 				},
 				"folderPath": {
-					"value": "@dataset().Outputdirectory",
+					"value": "@dataset().directory",
 					"type": "Expression"
 				},
 				"fileSystem": {
-					"value": "@dataset().Outputcontainer",
+					"value": "@dataset().container",
 					"type": "Expression"
 				}
 			},
