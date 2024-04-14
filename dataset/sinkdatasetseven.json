@@ -1,0 +1,32 @@
+{
+	"name": "sinkdatasetseven",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "project03272024datalake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Outputcontainer": {
+				"type": "string"
+			},
+			"Outputdirectory": {
+				"type": "string"
+			},
+			"Outputfile": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

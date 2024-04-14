@@ -33,7 +33,26 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -43,8 +62,22 @@
 										"container": {
 											"value": "@item().Inputcontainer",
 											"type": "Expression"
+										},
+										"directory": {
+											"value": "@item().Inputdirectory",
+											"type": "Expression"
+										},
+										"filename": {
+											"value": "@item().Inputfile",
+											"type": "Expression"
 										}
 									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "sinkdatasetseven",
+									"type": "DatasetReference"
 								}
 							]
 						}
