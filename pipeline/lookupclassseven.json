@@ -101,6 +101,19 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "Lookup1",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
 			}
 		],
 		"variables": {
@@ -110,7 +123,8 @@
 					{
 						"Inputfile": "Employee.csv",
 						"Inputcontainer": "input",
-						"Inputdirectory”:”folder”,”Outputfile": "Employee.csv",
+						"Inputdirectory": "folder",
+						"Outputfile": "Employee.csv",
 						"Outputcontainer": "folderforeach",
 						"Outputdirectory": "subfolderforeach"
 					},
@@ -125,7 +139,8 @@
 					{
 						"Inputfile": "SampleEmployee.csv",
 						"Inputcontainer": "input",
-						"Inputdirectory”:”folder”,”Outputfile": "SampleEmployee.csv",
+						"Inputdirectory": "folder",
+						"Outputfile": "SampleEmployee.csv",
 						"Outputcontainer": "folderforeach",
 						"Outputdirectory": "subfolderforeach2"
 					}
