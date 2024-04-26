@@ -79,7 +79,7 @@
 									"referenceName": "sqlparameter",
 									"type": "DatasetReference",
 									"parameters": {
-										"sqlschmea": {
+										"sqlschema": {
 											"value": "@item().schema",
 											"type": "Expression"
 										},

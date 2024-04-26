@@ -59,7 +59,7 @@
 						"referenceName": "sqlparameter",
 						"type": "DatasetReference",
 						"parameters": {
-							"sqlschmea": "dbo",
+							"sqlschema": "dbo",
 							"sqltablename": "metadatafullload"
 						}
 					}
